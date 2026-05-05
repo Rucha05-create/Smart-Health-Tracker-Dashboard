@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Health Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>💪 Smart Health Tracker</h2>
+  <button onclick="toggleTheme()">🌙</button>
+</header>
+
+<div class="dashboard">
+
+  <div class="card">
+    <h3>BMI</h3>
+    <p id="bmi">0</p>
+    <span id="bmiStatus"></span>
+  </div>
+
+  <div class="card">
+    <h3>Steps</h3>
+    <p id="steps">0</p>
+    <div class="progress"><div id="stepsBar"></div></div>
+  </div>
+
+  <div class="card">
+    <h3>Water</h3>
+    <p id="water">0 L</p>
+    <div class="progress"><div id="waterBar"></div></div>
+  </div>
+
+  <div class="card">
+    <h3>Calories</h3>
+    <p id="calories">0</p>
+  </div>
+
+</div>
+
+<div class="form">
+  <h3>Update Health Data</h3>
+
+  <input type="number" id="weight" placeholder="Weight (kg)">
+  <input type="number" id="height" placeholder="Height (cm)">
+  <input type="number" id="stepInput" placeholder="Steps">
+  <input type="number" id="waterInput" placeholder="Water (litres)">
+  <input type="number" id="calInput" placeholder="Calories">
+
+  <button onclick="updateData()">Update</button>
+  <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
